@@ -36,14 +36,14 @@ export default function Home() {
     });
   };
 
-  const handleGearSelect = (gear) => {
+  const handleGearSelect = (gear:any) => {
     setInputs({
       ...inputs,
       gear,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -64,7 +64,7 @@ export default function Home() {
 
       const data = await response.json();
       setPredictions(data);
-    } catch (err) {
+    } catch (err:any) {
       setError(err.message);
     } finally {
       setLoading(false);
